@@ -1,0 +1,16 @@
+.main-content-title {
+  float:left;
+  margin: 20px 50px 50px 50px;
+  padding: 10px;
+  border: #7B8D9B 1px solid;
+}
+
+.content {
+
+  &.hidden{
+    visibility: hidden;
+  }
+  &.showing {
+    visibility: visible;
+  }
+}
