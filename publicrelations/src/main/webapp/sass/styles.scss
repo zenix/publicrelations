@@ -1,16 +1,26 @@
-.main-content-title {
-  float:left;
-  margin: 20px 50px 50px 50px;
-  padding: 10px;
-  border: #7B8D9B 1px solid;
-}
-
-.content {
-
-  &.hidden{
-    visibility: hidden;
+.title{
+  height: 20%;
+  .main-content-title {
+    width: 20%;
+    height: 100%;
+    float:left;
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+    border: #7B8D9B 1px solid;
   }
-  &.showing {
-    visibility: visible;
+}
+.main-content {
+  clear: left;
+  position:absolute;
+  bottom:0;
+  width: 100%;
+  .content {
+    &.hidden{
+      display: none;
+    }
+    &.showing {
+      background-color: #7B8D9B;
+      display: block;
+    }
   }
 }

@@ -1,10 +1,20 @@
-.main-content-title {
-  float: left;
-  margin: 20px 50px 50px 50px;
-  padding: 10px;
-  border: #7B8D9B 1px solid; }
+.title {
+  height: 20%; }
+  .title .main-content-title {
+    width: 20%;
+    height: 100%;
+    float: left;
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+    border: #7B8D9B 1px solid; }
 
-.content.hidden {
-  visibility: hidden; }
-.content.showing {
-  visibility: visible; }
+.main-content {
+  clear: left;
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+  .main-content .content.hidden {
+    display: none; }
+  .main-content .content.showing {
+    background-color: #7B8D9B;
+    display: block; }
