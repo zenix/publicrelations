@@ -12,21 +12,23 @@ require(["bacon-jquery-bindings", "jquery", "jquery-transform"], function(bjq, $
         return $(event.target);
     }
     mouseEnterStream.onValue(function(target){
-        var targetForShowing = $('.' + target.attr("data-id")).addClass('showing').removeClass('hidden');
-        targetForShowing.removeAttr('style');
+        var targetForShowing = $('.' + target.attr("data-id")).addClass('showing').removeClass('hidden').removeAttr('style').stop(true);
         var title =  $('.title');
-        targetForShowing.stop(true);
         var animateAmount = $(window).height() - (title.position().top + title.outerHeight(true));
         targetForShowing.animate(
             {height: animateAmount + 'px'}
        );
     });
     mouseLeaveStream.onValue(function(target){
-        var targetForHiding = $('.' + target.attr("data-id")).addClass('hidden').removeClass('showing');
-        targetForHiding.removeAttr('style');
+        var targetForHiding = $('.' + target.attr("data-id")).stop(true);
         targetForHiding.animate(
-            {height: '0'}
+            {height: '0'},
+            function(){
+                targetForHiding.addClass('hidden').removeClass('showing') ;
+                targetForHiding.removeAttr('style');
+            }
         );
 
+        //
     })
 })
