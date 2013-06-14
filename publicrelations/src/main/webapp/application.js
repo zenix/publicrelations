@@ -15,6 +15,7 @@ require(["bacon-jquery-bindings", "jquery", "jquery-transform"], function(bjq, $
         var targetForShowing = $('.' + target.attr("data-id")).addClass('showing').removeClass('hidden');
         targetForShowing.removeAttr('style');
         var title =  $('.title');
+        targetForShowing.stop(true);
         var animateAmount = $(window).height() - (title.position().top + title.outerHeight(true));
         targetForShowing.animate(
             {height: '100%', transform: 'translateY(-'+ animateAmount+ ')'}
