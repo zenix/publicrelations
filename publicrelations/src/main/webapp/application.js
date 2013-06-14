@@ -18,17 +18,14 @@ require(["bacon-jquery-bindings", "jquery", "jquery-transform"], function(bjq, $
         targetForShowing.stop(true);
         var animateAmount = $(window).height() - (title.position().top + title.outerHeight(true));
         targetForShowing.animate(
-            {height: '100%', transform: 'translateY(-'+ animateAmount+ ')'}
-           //{transform: 'translateY(-'+ animateAmount+ ')'}
+            {height: animateAmount + 'px'}
        );
     });
     mouseLeaveStream.onValue(function(target){
         var targetForHiding = $('.' + target.attr("data-id")).addClass('hidden').removeClass('showing');
         targetForHiding.removeAttr('style');
-        var title =  $('.title');
-        var animateAmount = $(window).height() - (title.position().top + title.outerHeight(true));
         targetForHiding.animate(
-            {height: '0', transform: 'translateY('+ animateAmount+ ')'}
+            {height: '0'}
         );
 
     })
