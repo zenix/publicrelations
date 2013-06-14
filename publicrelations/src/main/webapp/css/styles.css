@@ -1,12 +1,13 @@
-.title {
-  height: 20%; }
-  .title .main-content-title {
-    width: 20%;
-    height: 100%;
-    float: left;
-    margin: 0px 0px 0px 0px;
-    padding: 0px;
-    border: #7B8D9B 1px solid; }
+.title .main-content-title {
+  width: 20%;
+  float: left;
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+  border: #7B8D9B 1px solid;
+  line-height: 3em;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3em; }
 
 .main-content {
   clear: left;

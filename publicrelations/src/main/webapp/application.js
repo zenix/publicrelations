@@ -13,7 +13,7 @@ require(["bacon-jquery-bindings", "jquery", "jquery-transform"], function(bjq, $
     }
     mouseEnterStream.onValue(function(target){
         var targetForShowing = $('.' + target.attr("data-id")).addClass('showing').removeClass('hidden').removeAttr('style').stop(true);
-        var title =  $('.title');
+        var title =  $('.main-content-title');
         var animateAmount = $(window).height() - (title.position().top + title.outerHeight(true));
         targetForShowing.animate(
             {height: animateAmount + 'px'}
