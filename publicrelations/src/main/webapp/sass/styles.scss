@@ -1,13 +1,19 @@
+@import "mixins";
+
 .title{
   .main-content-title {
     width: 20%;
     float:left;
     margin: 0px 0px 0px 0px;
     padding: 0px;
-    border: #7B8D9B 1px solid;
+    border-bottom: #BCC8D1 1px solid;
+    border-left: #BCC8D1 1px solid;
+    border-right: #BCC8D1 1px solid;
     line-height:3em;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    color: #330033;
+    @include gradient(#FFF, whitesmoke);
     font-size: 3em;
   }
 }
